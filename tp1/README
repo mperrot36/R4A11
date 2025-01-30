@@ -1,3 +1,4 @@
 # R4A11_TP1
 # 1: il s'appelle AndroidManifest.xml et se trouve C:\Users\IUT\Downloads\R4A11_TP1\MyApplication\app\src\main\AndroidManifest.xml
 # 2: le code du activity_main.xml
+# 3: la ligne  android:icon="@mipmap/ic_launcher" et  android:roundIcon="@mipmap/ic_launcher_round" m'ont indiqué quel fichiers modifier 
