@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val premierBouton: Button = findViewById(R.id.premierButton)
         val editText: EditText = findViewById(R.id.editText)
         val textView: TextView = findViewById(R.id.textView1)
-        val layoutPrincipal: ConstraintLayout = findViewById(R.id.main)
+        val layoutPrincipal: ConstraintLayout = findViewById(R.id.mainLayout)
 
         val deuxiemeTextView = TextView(this)
 
@@ -46,8 +47,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        val boutonNext: Button = findViewById(R.id.next)
+        boutonNext.setOnClickListener {
+            val intent = Intent(this@MainActivity, MainActivity2::class.java)
+            startActivity(intent)
+        }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainLayout)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

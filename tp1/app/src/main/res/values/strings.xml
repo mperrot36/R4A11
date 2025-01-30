@@ -3,5 +3,7 @@
     <string name="zone_de_texte">Inserer texte</string>
     <string name="zone_affichage">affichage</string>
     <string name="phrase_magique">afficher nouveau textView</string>
+    <string name="display_label">Titre</string>
+    <string name="display_label_next">Suivant</string>
 
 </resources>
