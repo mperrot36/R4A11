@@ -8,6 +8,8 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val intent = intent
+        intent.getStringExtra(EXTRA_TEXT)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)

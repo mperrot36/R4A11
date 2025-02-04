@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tp2</string>
+    <string name="titre">Bienvenue</string>
+    <string name="edit">Saisir votre nom</string>
+    <string name="validation">Valider</string>
+
+</resources>

@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        const val EXTRA_TEXT = "text_to_display"
         setContentView(R.layout.activity_main)
 
         val premierBouton: Button = findViewById(R.id.premierButton)
@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
         boutonNext.setOnClickListener {
             val intent = Intent(this@MainActivity, MainActivity2::class.java)
             startActivity(intent)
+
+            intent.putExtra(EXTRA_TEXT, VOSDONNEES)
         }
 
 
