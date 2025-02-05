@@ -10,7 +10,12 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val textView = findViewById<TextView>(R.id.textView3)
-        val texteRecu = intent.getStringExtra("Bonjour"+"TEXT_SAISI")
-        textView.text = texteRecu
+
+        val texteRecu = intent.getStringExtra("TEXT_SAISI")
+        val ageCalcul = intent.getIntExtra("AGE_CALCUL", 0)  // Valeur par défaut = 0 si l'age n'est pas trouvé
+
+        textView.text = "Hello $texteRecu vous avez $ageCalcul ans !"
+
+
     }
 }

@@ -22,15 +22,24 @@ class MainActivity : AppCompatActivity() {
 
         val editText = findViewById<EditText>(R.id.editTextText)
         val button = findViewById<Button>(R.id.button)
-
+        val editTextYear = findViewById<EditText>(R.id.editTextText2)
         button.setOnClickListener {
             val text = editText.text.toString().trim()
-            if (text.isNotEmpty()) {
-                val intent = Intent(this, MainActivity2::class.java)
-                intent.putExtra("TEXT_SAISI", text)
-                startActivity(intent)
+            val yearText = editTextYear.text.toString().trim()
+
+            if (text.isNotEmpty() && yearText.isNotEmpty()) {
+                val birthYear = yearText.toIntOrNull()
+                if (birthYear != null) {
+                    val age = AgeCalculator.calculateAge(birthYear)
+                    val intent = Intent(this, MainActivity2::class.java)
+                    intent.putExtra("TEXT_SAISI", text)
+                    intent.putExtra("AGE_CALCUL", age)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Veuillez rentrer une année valide", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                Toast.makeText(this, "Veuillez entrer un texte", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show()
             }
         }
 
