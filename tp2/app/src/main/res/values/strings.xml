@@ -1,7 +1,4 @@
 <resources>
     <string name="app_name">tp2</string>
-    <string name="titre">Bienvenue</string>
-    <string name="edit">Saisir votre nom</string>
-    <string name="validation">Valider</string>
-
+    <string name="title_activity_main2">MainActivity2</string>
 </resources>

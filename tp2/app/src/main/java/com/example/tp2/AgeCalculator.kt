@@ -1,10 +1,19 @@
-package com.example.tp2
+import android.os.Build
+import androidx.annotation.RequiresApi
+import java.time.LocalDate
 
-import java.util.Calendar
+class AgeCalculator {
 
-object AgeCalculator {
-    fun calculateAge(birthYear: Int): Int {
-        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
-        return currentYear - birthYear
+
+    @RequiresApi(Build.VERSION_CODES.O)
+
+
+    companion object {
+        fun calculAge(yearOfBirth: Int): Int {
+
+            val currentYear = LocalDate.now().year
+
+            return currentYear - yearOfBirth
+        }
     }
 }
